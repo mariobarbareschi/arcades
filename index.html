@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ARCADES — Advanced Research on Computing Architectures and Dependable Embedded Systems. Research group at the University of Naples Federico II.">
+  <meta name="theme-color" content="#07110f">
+  <title>ARCADES — Advanced Computing Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260911-7">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="ARCADES home">
+      <img class="brand-symbol" src="assets/brand/arcades-mark.svg" alt="">
+      <span class="brand-name">ARCADES</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#research" data-it="Ricerca" data-en="Research">Ricerca</a>
+      <a href="#people" data-it="Persone" data-en="People">Persone</a>
+      <a href="#publications" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</a>
+      <a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#research" data-it="Ricerca" data-en="Research">Ricerca</a>
+    <a href="#people" data-it="Persone" data-en="People">Persone</a>
+    <a href="#publications" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</a>
+    <a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span><span data-it="Università degli Studi di Napoli Federico II" data-en="Università degli Studi di Napoli Federico II">Università degli Studi di Napoli Federico II</span></p>
+        <h1>
+          <span data-it="Progettiamo il futuro" data-en="Engineering the future">Engineering the future</span><br>
+          <span class="accent" data-it="dei sistemi di calcolo" data-en="of computing systems">of computing systems</span>
+        </h1>
+        <p class="hero-intro" data-it="Architetture di calcolo avanzate, sistemi embedded affidabili e ricerca che trasforma la complessità in tecnologia concreta." data-en="Advanced computing architectures, dependable embedded systems, and research that turns complexity into tangible technology.">Architetture di calcolo avanzate, sistemi embedded affidabili e ricerca che trasforma la complessità in tecnologia concreta.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#research"><span data-it="Esplora la ricerca" data-en="Explore our research">Esplora la ricerca</span><b aria-hidden="true">↘</b></a>
+          <a class="button text-button" href="#people"><span data-it="Conosci il team" data-en="Meet the team">Conosci il team</span><b aria-hidden="true">→</b></a>
+        </div>
+        <div class="play-line" aria-label="We play embedded, safe, secure, dependable, high-performance and reconfigurable systems">
+          <span>WE PLAY</span>
+          <span class="play-window" aria-hidden="true"><b id="play-word">EMBEDDED</b></span>
+        </div>
+      </div>
+
+      <div class="hero-system reveal" aria-label="Advanced Research on Computing Architectures and Dependable Embedded Systems">
+        <div class="orbital">
+          <div class="topic-orbit" aria-hidden="true">
+            <span style="--a:0deg;--ca:0deg"><b>SECURITY &amp; TRUST</b></span>
+            <span style="--a:60deg;--ca:-60deg"><b>DEPENDABILITY</b></span>
+            <span style="--a:120deg;--ca:-120deg"><b>HIGH-PERFORMANCE COMPUTING</b></span>
+            <span style="--a:180deg;--ca:-180deg"><b>EDGE</b></span>
+            <span style="--a:240deg;--ca:-240deg"><b>FPGA</b></span>
+            <span style="--a:300deg;--ca:-300deg"><b>DIGITAL TWINS</b></span>
+          </div>
+          <div class="orbit-dot orbit-dot-outer">
+            <button class="catch-target" id="catch-target" type="button" aria-label="Catch the green signal" disabled></button>
+          </div>
+          <div class="orbit-dot orbit-dot-inner" aria-hidden="true"><i></i></div>
+          <div class="core"><img src="assets/brand/arcades-mark.svg" alt="ARCADES"></div>
+        </div>
+        <div class="orbit-console" id="orbit-console">
+          <button class="orbit-play" id="orbit-play" type="button"><span aria-hidden="true">▶</span> PLAY</button>
+          <div class="orbit-scoreboard" aria-label="Orbit Catch scoreboard" aria-hidden="true">
+            <span>SCORE <output id="orbit-score">000000</output></span>
+            <span>BIN <output id="orbit-binary">0000000000000000</output></span>
+            <span>STREAK <output id="orbit-streak">×00</output></span>
+            <span>TIME <output id="orbit-time">20.0</output></span>
+          </div>
+          <p class="orbit-status" id="orbit-status" aria-live="polite" aria-hidden="true">CATCH THE ACID SIGNAL · AVOID CYAN DECOYS</p>
+        </div>
+      </div>
+
+      <div class="hero-footer">
+        <span><a href="https://www.dieti.unina.it/" target="_blank" rel="noreferrer">DIETI</a> · <a href="https://www.unina.it/" target="_blank" rel="noreferrer">UNINA</a></span>
+        <span class="location-cuboid" aria-label="Via Claudio 21, Naples, Italy. Coordinates: 40.826 degrees north, 14.190 degrees east.">
+          <span class="location-rotor" aria-hidden="true">
+            <span class="location-face location-front">VIA CLAUDIO 21 · NAPLES, ITALY</span>
+            <span class="location-face location-top">40.826° N · 14.190° E</span>
+            <span class="location-face location-back">VIA CLAUDIO 21 · NAPLES, ITALY</span>
+            <span class="location-face location-bottom">40.826° N · 14.190° E</span>
+          </span>
+        </span>
+        <a href="#research" aria-label="Scorri alla ricerca">SCROLL <i>↓</i></a>
+      </div>
+    </section>
+
+    <section class="manifesto section-pad">
+      <div class="section-index">01 — <span data-it="CHI SIAMO" data-en="ABOUT US">CHI SIAMO</span></div>
+      <div class="manifesto-content reveal">
+        <p class="large-copy" data-it="Esploriamo il punto in cui hardware, software e mondo fisico si incontrano. Costruiamo sistemi capaci di essere <em>più veloci</em>, <em>più sicuri</em> e <em>più affidabili</em>." data-en="We explore where hardware, software, and the physical world meet. We build systems designed to be <em>faster</em>, <em>safer</em>, and <em>more dependable</em>.">Esploriamo il punto in cui hardware, software e mondo fisico si incontrano. Costruiamo sistemi capaci di essere <em>più veloci</em>, <em>più sicuri</em> e <em>più affidabili</em>.</p>
+        <div class="manifesto-note">
+          <span class="pixel-cross" aria-hidden="true">+</span>
+          <p data-it="ARCADES riunisce competenze multidisciplinari del Dipartimento di Ingegneria Elettrica e delle Tecnologie dell'Informazione dell'Università Federico II di Napoli." data-en="ARCADES brings together multidisciplinary expertise at the Department of Electrical Engineering and Information Technology, University of Naples Federico II.">ARCADES riunisce competenze multidisciplinari del Dipartimento di Ingegneria Elettrica e delle Tecnologie dell'Informazione dell'Università Federico II di Napoli.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="research section-pad" id="research">
+      <div class="section-head reveal">
+        <div class="section-index">02 — <span data-it="RICERCA" data-en="RESEARCH">RICERCA</span></div>
+        <h2 data-it="Le nostre traiettorie" data-en="Our research directions">Le nostre traiettorie</h2>
+        <p data-it="Dalla scala del singolo chip agli ecosistemi digitali complessi." data-en="From the scale of a single chip to complex digital ecosystems.">Dalla scala del singolo chip agli ecosistemi digitali complessi.</p>
+      </div>
+
+      <div class="research-list">
+        <article class="research-card reveal">
+          <div class="card-number">01</div>
+          <div class="card-icon chip-icon" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false">
+              <rect class="chip-package" x="28" y="28" width="44" height="44" rx="5"/>
+              <rect class="chip-die" x="39" y="39" width="22" height="22" rx="3"/>
+              <path class="chip-pins" d="M36 28V17M45.33 28V17M54.67 28V17M64 28V17 M36 72V83M45.33 72V83M54.67 72V83M64 72V83 M28 36H17M28 45.33H17M28 54.67H17M28 64H17 M72 36H83M72 45.33H83M72 54.67H83M72 64H83"/>
+              <path class="chip-circuit" d="M39 45H33M61 55H67M45 39V33M55 61V67M45 45H55V55H48"/>
+              <circle class="chip-node" cx="48" cy="55" r="2.3"/>
+            </svg>
+          </div>
+          <div class="card-copy">
+            <h3 data-it="Architetture di calcolo" data-en="Computing architectures">Architetture di calcolo</h3>
+            <p data-it="Progettazione e ottimizzazione di architetture eterogenee, riconfigurabili e ad alte prestazioni." data-en="Design and optimization of heterogeneous, reconfigurable, and high-performance architectures.">Progettazione e ottimizzazione di architetture eterogenee, riconfigurabili e ad alte prestazioni.</p>
+            <ul><li>FPGA &amp; Reconfigurable Systems</li><li>Hardware Acceleration</li><li>Edge Computing</li></ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </article>
+        <article class="research-card reveal">
+          <div class="card-number">02</div>
+          <div class="card-icon shield-icon" aria-hidden="true"><i></i></div>
+          <div class="card-copy">
+            <h3 data-it="Sistemi affidabili e sicuri" data-en="Dependable & secure systems">Sistemi affidabili e sicuri</h3>
+            <p data-it="Metodi, modelli e tecnologie per sistemi resilienti a guasti, attacchi e condizioni impreviste." data-en="Methods, models, and technologies for systems resilient to faults, attacks, and unexpected conditions.">Metodi, modelli e tecnologie per sistemi resilienti a guasti, attacchi e condizioni impreviste.</p>
+            <ul><li>Cybersecurity</li><li>Fault Tolerance</li><li>Critical Infrastructures</li></ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </article>
+        <article class="research-card reveal">
+          <div class="card-number">03</div>
+          <div class="card-icon twin-icon" aria-hidden="true"><i></i><i></i></div>
+          <div class="card-copy">
+            <h3 data-it="Digital twin e sistemi cyber-fisici" data-en="Digital twins & cyber-physical systems">Digital twin e sistemi cyber-fisici</h3>
+            <p data-it="Gemelli digitali, IoT e piattaforme intelligenti per osservare, comprendere e governare sistemi reali." data-en="Digital twins, IoT, and intelligent platforms to observe, understand, and govern real-world systems.">Gemelli digitali, IoT e piattaforme intelligenti per osservare, comprendere e governare sistemi reali.</p>
+            <ul><li>Digital Twins</li><li>Industrial IoT</li><li>Smart Ecosystems</li></ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </article>
+        <article class="research-card reveal">
+          <div class="card-number">04</div>
+          <div class="card-icon cloud-icon" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false">
+              <path class="cloud-outline" d="M23 69C13 69 7 62 7 53s7-16 16-17c3-14 15-23 29-23s26 9 28 23c9 1 14 8 14 17s-7 16-17 16H23Z"/>
+              <text class="cloud-binary" x="50" y="57" text-anchor="middle">01 01 01</text>
+            </svg>
+          </div>
+          <div class="card-copy">
+            <h3 data-it="Cloud, edge e sistemi distribuiti" data-en="Cloud, edge & distributed systems">Cloud, edge e sistemi distribuiti</h3>
+            <p data-it="Infrastrutture scalabili e servizi distribuiti progettati per efficienza, continuità e fiducia." data-en="Scalable infrastructures and distributed services designed for efficiency, continuity, and trust.">Infrastrutture scalabili e servizi distribuiti progettati per efficienza, continuità e fiducia.</p>
+            <ul><li>Cloud Computing</li><li>Distributed Systems</li><li>Service Resilience</li></ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="people section-pad" id="people">
+      <div class="section-head reveal">
+        <div class="section-index">03 — <span data-it="PERSONE" data-en="PEOPLE">PERSONE</span></div>
+        <h2 data-it="Il gruppo" data-en="The team">Il gruppo</h2>
+        <p data-it="Competenze diverse, una direzione condivisa." data-en="Different expertise, one shared direction.">Competenze diverse, una direzione condivisa.</p>
+      </div>
+
+      <div class="people-group reveal">
+        <h3><span>01</span><span data-it="Professori ordinari" data-en="Full professors">Professori ordinari</span></h3>
+        <div class="people-grid">
+          <a class="person" href="https://www.docenti.unina.it/valentina.casola" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/valentina-casola.png" alt="Valentina Casola"></span><span><b>Valentina Casola</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/alessandro.cilardo" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/alessandro-cilardo.png" alt="Alessandro Cilardo"></span><span><b>Alessandro Cilardo</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/nicola.mazzocca" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/nicola-mazzocca.png" alt="Nicola Mazzocca"></span><span><b>Nicola Mazzocca</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/massimiliano.rak" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/massimiliano-rak.png" alt="Massimiliano Rak"></span><span><b>Massimiliano Rak</b></span><i>↗</i></a>
+        </div>
+      </div>
+
+      <div class="people-group reveal">
+        <h3><span>02</span><span data-it="Professori associati" data-en="Associate professors">Professori associati</span></h3>
+        <div class="people-grid">
+          <a class="person" href="https://www.docenti.unina.it/mario.barbareschi" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/mario-barbareschi.png" alt="Mario Barbareschi"></span><span><b>Mario Barbareschi</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/alessandra.debenedictis" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/alessandra-de-benedictis.png" alt="Alessandra De Benedictis"></span><span><b>Alessandra De Benedictis</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/valeria.vittorini" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/valeria-vittorini.jpeg" alt="Valeria Vittorini"></span><span><b>Valeria Vittorini</b></span><i>↗</i></a>
+        </div>
+      </div>
+
+      <div class="people-group reveal">
+        <h3><span>03</span><span data-it="Ricercatori" data-en="Researchers">Ricercatori</span></h3>
+        <div class="people-grid">
+          <a class="person" href="https://www.docenti.unina.it/alessandra.somma" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/alessandra-somma.png" alt="Alessandra Somma"></span><span><b>Alessandra Somma</b></span><i>↗</i></a>
+          <a class="person" href="https://www.docenti.unina.it/franca.roccoditorrepadula"><span class="avatar has-photo"><img src="assets/people/franca-rocco-di-torrepadula.png" alt="Franca Rocco di Torrepadula"></span><span><b>Franca Rocco di Torrepadula</b></span><i>↗</i></a>
+        </div>
+      </div>
+
+        <div class="people-group reveal">
+        <h3><span>04</span><span data-it="Post-doc" data-en="Post-doc researchers">Post-doc</span></h3>
+        <div class="people-grid">
+          <a class="person" href="#contact" target="_blank" rel="noreferrer"><span class="avatar has-photo"><img src="assets/people/francesco-vitale.png" alt="Francesco Vitale"></span><span><b>Francesco Vitale</b></span><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="publications section-pad" id="publications">
+      <div class="publication-panel reveal">
+        <div>
+          <div class="section-index">04 — <span data-it="PUBBLICAZIONI" data-en="PUBLICATIONS">PUBBLICAZIONI</span></div>
+          <h2 data-it="I nostri prodotti di ricerca." data-en="Our reseach products.">La ricerca,<br>resa pubblica.</h2>
+        </div>
+        <div class="publication-copy">
+          <p data-it="Articoli, atti di conferenza, dataset e risultati dei progetti del gruppo sono disponibili nel catalogo istituzionale dell'Ateneo." data-en="Journal articles, conference proceedings, datasets, and project outcomes are available through the University's institutional catalogue.">Articoli, atti di conferenza, dataset e risultati dei progetti del gruppo sono disponibili nel catalogo istituzionale dell'Ateneo.</p>
+          <a class="button light" href="https://www.iris.unina.it/" target="_blank" rel="noreferrer"><span data-it="Vai al catalogo IRIS" data-en="Visit the IRIS catalogue">Vai al catalogo IRIS</span><b>↗</b></a>
+        </div>
+        <div class="publication-art" aria-hidden="true"><span>A</span><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="contact-title reveal">
+        <div class="section-index">05 — <span data-it="CONTATTI" data-en="CONTACT">CONTATTI</span></div>
+        <h2 data-it="Costruiamo il prossimo livello." data-en="Let’s build the next level.">Costruiamo il<br><span>prossimo livello.</span></h2>
+      </div>
+      <div class="contact-details reveal">
+        <div><small data-it="DOVE" data-en="WHERE">DOVE</small><p>DIETI — Università degli Studi<br>di Napoli Federico II<br>Via Claudio 21, 80125 Napoli</p></div>
+        <div><small data-it="SCRIVICI" data-en="GET IN TOUCH">SCRIVICI</small><p><a href="mailto:info@embedded.unina.it">info@embedded.unina.it</a></p></div>
+        <div><small data-it="SEGUICI" data-en="FOLLOW US">SEGUICI</small><p><a href="https://www.linkedin.com/school/universita-federico-ii/" target="_blank" rel="noreferrer">LinkedIn ↗</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><img class="brand-symbol" src="assets/brand/arcades-mark.svg" alt=""><span class="brand-name">ARCADES</span></a>
+    <p>Advanced Research on Computing Architectures<br>and Dependable Embedded Systems</p>
+    <p class="copyright">© <span id="year"></span> ARCADES · <span data-it="Tutti i diritti riservati" data-en="All rights reserved">Tutti i diritti riservati</span></p>
+  </footer>
+
+  <script src="script.js?v=20260911-5"></script>
+</body>
+</html>
