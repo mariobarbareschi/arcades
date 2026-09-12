@@ -8,6 +8,8 @@
 .hero-system .core img{display:block!important;width:168px!important;height:168px!important;max-width:168px!important;max-height:168px!important;object-fit:contain}
 .play-line{display:flex;align-items:center;gap:12px;margin-top:44px;font:500 13px var(--mono);letter-spacing:.09em;color:#84918b}.play-window{display:inline-flex;align-items:center;min-width:190px;height:29px;overflow:hidden;color:var(--acid);border-left:1px solid rgba(199,255,50,.45);padding-left:12px}.play-window b{font-weight:500;display:block;transition:opacity .18s,transform .18s}.play-window b.out{opacity:0;transform:translateY(-12px)}.play-window b.in{opacity:0;transform:translateY(12px)}
 .avatar.has-photo{background:var(--blue);overflow:hidden}
+.avatar.has-photo{position:relative}
+.avatar.has-photo img{position:absolute;inset:0;min-width:0;min-height:0}
 .avatar.has-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(1.02);transition:transform .35s,filter .35s}
 .person:hover .avatar.has-photo img{transform:scale(1.08);filter:saturate(1) contrast(1.04)}
 .footer-brand .brand-symbol{filter:grayscale(1) brightness(0) invert(1)}.footer-brand .brand-name{color:#fff}
@@ -54,4 +56,18 @@
 .orbit-console.is-playing .orbit-status,.orbit-console.is-complete .orbit-status{height:18px;margin:5px 0 0;opacity:1;visibility:visible;transform:none;transition-delay:0s,.0s,.12s,.12s,0s}
 .orbit-console.is-complete .orbit-status{color:var(--acid)}
 @media(min-width:621px) and (max-width:900px){.hero-system{opacity:1}}
+
+/* Expanded people directory */
+.people-group h3{gap:0}
+.people-group h3 span:first-child{color:inherit}
+.phd-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.person.phd-person{height:auto;min-height:142px;padding:17px 0;grid-template-columns:56px 1fr 25px}
+.person.phd-person:hover{padding:17px 12px}
+.phd-copy{display:flex;min-width:0;flex-direction:column;gap:5px}
+.phd-copy small{font:9px/1.45 var(--mono);color:#68716d;text-transform:uppercase;letter-spacing:.06em}
+.phd-copy>span{font-size:11px;line-height:1.45;color:#59615e}
+.alumni-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 34px;margin:0;padding:0;list-style:none}
+.alumni-list li{min-height:54px;display:flex;align-items:center;border-bottom:1px solid var(--line);font:600 14px var(--display)}
+@media(max-width:900px){.phd-grid{grid-template-columns:1fr}.alumni-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.person.phd-person{min-height:132px}.alumni-list{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.orbit,.location-rotor,.topic-orbit,.topic-orbit b,.orbit-dot{animation:none}.location-top,.location-back,.location-bottom{display:none}}
