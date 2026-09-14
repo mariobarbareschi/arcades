@@ -58,6 +58,14 @@
 @media(min-width:621px) and (max-width:900px){.hero-system{opacity:1}}
 
 /* Expanded people directory */
+article.person:hover{padding:0;background:transparent}
+article.person.phd-person:hover{padding:17px 0;background:transparent}
+.publication-author-filter{margin-top:26px}
+.publication-author-filter label{display:block;font:11px var(--mono);margin-bottom:10px}
+.publication-author-filter>div{display:flex;gap:12px;align-items:center}
+.publication-author-filter select{min-width:0;flex:1;max-width:100%;padding:10px;background:transparent;color:var(--ink);border:1px solid rgba(7,17,15,.4);font:12px var(--sans)}
+.publication-author-filter a{font:500 12px var(--mono);white-space:nowrap;border-bottom:1px solid currentColor}
+.publication-author-filter a:focus-visible,.publication-author-filter select:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 .people-group h3{gap:0}
 .people-group h3 span:first-child{color:inherit}
 .phd-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
