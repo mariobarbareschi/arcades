@@ -431,7 +431,7 @@ window.ARCADES_PEOPLE = [
         "id": "raffaele-martino"
       },
       {
-        "name": "Stefano Mercogliano*",
+        "name": "Stefano Mercogliano",
         "personalUrl": null,
         "irisId": null,
         "irisName": null,
