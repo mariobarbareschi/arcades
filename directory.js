@@ -16,19 +16,12 @@
 
   function irisClause(person) {
     if (/^rp\d+$/.test(person.irisId || '')) return 'author_authority:' + person.irisId;
-    // Exact author field, not a full-text name search.
-    const name = (person.irisName || '').replace(/[\\"]/g, '\\$&');
-    if (!name) return null;
-    let clause = 'author_keyword:"' + name + '"';
-    const exclusions = (person.irisExcludeIds || []).filter(id => /^rp\d+$/.test(id));
-    if (exclusions.length) clause = '(' + clause + ' AND NOT author_authority:' + (exclusions.length === 1 ? exclusions[0] : '(' + exclusions.join(' OR ') + ')') + ')';
-    return clause;
+    return null;
   }
 
   function publicationsUrl(members = currentMembers) {
     const ids = [...new Set(members.map(person => person.irisId).filter(id => /^rp\d+$/.test(id || '')))];
     const clauses = ids.length ? ['author_authority:(' + ids.join(' OR ') + ')'] : [];
-    clauses.push(...new Set(members.filter(person => !/^rp\d+$/.test(person.irisId || '')).map(irisClause).filter(Boolean)));
     if (!clauses.length) return null;
     const url = new URL('https://www.iris.unina.it/simple-search');
     url.searchParams.set('query', clauses.join(' OR '));
@@ -105,7 +98,7 @@
   const authorSelect = document.getElementById('publication-author');
   const authorLink = document.getElementById('publication-author-link');
   if (authorSelect && authorLink) {
-    currentMembers.forEach(person => {
+    currentMembers.filter(person => irisClause(person)).forEach(person => {
       const option = element('option', '', person.name);
       option.value = person.id; authorSelect.append(option);
     });

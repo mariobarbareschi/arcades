@@ -1,6 +1,6 @@
 // Single source for People and the publications search. Works also from file://.
 // Move a person to the alumni group to remove them from the current-members search.
-// personalUrl: null => non-clickable card. irisId: null => exact irisName fallback.
+// personalUrl: null => non-clickable card. irisId: null => excluded from IRIS searches.
 // IRIS IDs verified through its public author autocomplete on 2026-09-14.
 window.ARCADES_PEOPLE = [
   {
@@ -144,7 +144,7 @@ window.ARCADES_PEOPLE = [
         "photo": "assets/people/lorenzo-abate.jpg",
         "topic": "Mastering Machine Learning at the Edge",
         "id": "lorenzo-abate",
-        "irisNote": "No matching authority ID verified on 2026-09-14; exact-name fallback.",
+        "irisNote": "No verified IRIS ID; excluded from publication searches.",
         "cycle": "XLI",
         "supervisorId": "mario-barbareschi"
       },
@@ -167,7 +167,7 @@ window.ARCADES_PEOPLE = [
         "photo": "assets/people/manfredi-napolitano.png",
         "topic": "Research in progress",
         "id": "manfredi-napolitano",
-        "irisNote": "No matching authority ID verified on 2026-09-14; exact-name fallback.",
+        "irisNote": "No verified IRIS ID; excluded from publication searches.",
         "cycle": "XXXIX",
         "supervisorId": "nicola-mazzocca"
       },
@@ -201,7 +201,7 @@ window.ARCADES_PEOPLE = [
         "photo": "assets/people/carmine-palmese.jpg",
         "topic": "Architectures for Fault-Tolerant Quantum Computing Control Stack",
         "id": "carmine-palmese",
-        "irisNote": "No matching authority ID verified on 2026-09-14; exact-name fallback.",
+        "irisNote": "No verified IRIS ID; excluded from publication searches.",
         "cycle": "XLI",
         "supervisorId": "alessandro-cilardo"
       },
@@ -213,7 +213,7 @@ window.ARCADES_PEOPLE = [
         "photo": "assets/people/benedetta-gaia-varriale.jpg",
         "topic": "Quality Assurance for AI-Generated Software",
         "id": "benedetta-gaia-varriale",
-        "irisNote": "No matching authority ID verified on 2026-09-14; exact-name fallback.",
+        "irisNote": "No verified IRIS ID; excluded from publication searches.",
         "cycle": "XLI",
         "supervisorId": "alessandro-cilardo"
       },
@@ -225,10 +225,7 @@ window.ARCADES_PEOPLE = [
         "photo": "assets/people/francesco-grimaldi.jpg",
         "topic": "Methods, Models and Techniques for Security of Hybrid Physical-Virtual Systems",
         "id": "francesco-grimaldi",
-        "irisNote": "rp13495 belongs to a medical researcher with the same name; exclude this profile.",
-        "irisExcludeIds": [
-          "rp13495"
-        ],
+        "irisNote": "No verified IRIS ID; excluded from publication searches. rp13495 is a different person.",
         "cycle": "XLI",
         "supervisorId": "massimiliano-rak"
       }
@@ -441,4 +438,3 @@ window.ARCADES_PEOPLE = [
     ]
   }
 ];
-
